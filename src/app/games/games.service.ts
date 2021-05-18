@@ -1,16 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ɵnoSideEffects } from '@angular/core/src/r3_symbols';
 import { Game } from './game/game.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GamesService {
-  static games(): Game[] {
-    throw new Error('Method not implemented.');
-  }
 
-  gam: Game[]=[
+  game: Game[]=[
 
     {
       id: "mass-effect",
@@ -54,6 +50,6 @@ export class GamesService {
   constructor() { }
 
   games(): Game[]{
-    return this.gam;
+    return this.game;
   }
 }
